@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#myid{
+		width:  fit-content;
+		margin: auto;
+	}
+	h1{
+		/*  글자부분만 배경색으로 지정하자 */
+		display:inline-block;
+		background-color: Lightblue;
+		color: white;
+	}
+	.accent{
+		color: red;
+		font-weight: bold;
+	}
+	
+	/*
+		display : inline, block, inline-block;
+			1. inline : 요소 전후 줄바꿈 없이 한줄에 다른 요소들과 배치	
+							width와 height 속성을 지정해도 무시됨
+							margin, padding도 좌우 간격만 반영되고, 상하간격은 반영이 안됨
+			2. block : 해당 요소 전후 줄 바꿈이 들어감
+			3.inline-block : inline치면 줄바꿈없이 다른 요소들과 나란히 배치 되지만
+									 width와 height 지정가능, margin, padding 상하 간격도 지정가능
+	*/
+	
+	span.a{
+			display: inline;
+			background-color: yellow;
+			width: 100px;
+			height: 100px;
+	}
+	span.b{
+			display: block;
+			background-color: yellow;
+			width: 100px;
+			height: 100px;
+	}
+	span.c{
+			display: inline-block;
+			background-color: yellow;
+			width: 100px;
+			height: 100px;
+	}
+	ul.nav{
+			background-color: yellow;
+			list-style-type: none;
+			text-align: cemter;
+			padding: 0;
+			margin: 0;
+	}
+	
+	nav.li{
+		display: inline-block;
+		margin: auto;
+		padding: 20px;
+		font-size: 20px
+	}
+	
+</style>
+</head>
+<body>
+<div id="myid">
+    <h1>탐라국 입춘굿</h1>
+    <p>제주도의 문화축제 중에서 유일하게 <span class="accent">전통시대부터 존재했던 축제</span>이다.</p>
+    <p>제주에서 입춘은 새철<sup>(제주어, 샛절)</sup> 드는 날. <br>
+      하늘의 1만8000신이 지상으로 내려와 새해 일들을 시작하는 때다.
+    </p>
+  </div>
+  <hr>
+  <h2> display : inline</h2>
+  <div>
+    	 제주도의 문화축제 중에서 유일하게전통시대부터 존재했던 축제이다.
+    	  제주에서 <span class="a">입춘</span>은 <span class="a">새철(제주어, 샛절)</span> 드는 날.
+  		 하늘의 1만8000신이 지상으로 내려와 새해 일들을 시작하는 때다.
+  </div>
+  
+  <h2> display : block</h2>
+  <div>
+    	 제주도의 문화축제 중에서 유일하게전통시대부터 존재했던 축제이다.
+    	 제주에서 <span class="b">입춘</span>은 <span class="b">새철(제주어, 샛절)</span> 드는 날.
+  		 하늘의 1만8000신이 지상으로 내려와 새해 일들을 시작하는 때다.
+  </div>
+  
+  <h2> display : inline-block</h2>
+  <div>
+    	 제주도의 문화축제 중에서 유일하게전통시대부터 존재했던 축제이다.
+    	제주에서 <span class="c">입춘</span>은 <span class="c">새철(제주어, 샛절)</span> 드는 날.
+  		 하늘의 1만8000신이 지상으로 내려와 새해 일들을 시작하는 때다.
+  </div>
+ <hr>
+ 
+ <ul>
+ <li><a href="#">HOME</a></li>
+ <li><a href="#">About us</a></li>
+ <li><a href="#">HOME</a></li>
+ <li><a href="#">HOME</a></li>
+ 
+ 
+ </ul>
+</body>
+</html>

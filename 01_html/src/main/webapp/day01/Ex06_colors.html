@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>colors</title>
+</head>
+<body>
+<!-- 
+		color names : 색상이름을 사용해서 색지정
+		BurlyWood, CadetBlue, Chocolate, HotPink, Indigo, Khaki
+		style 속성 : 배경색, 글자색, 테두리(Border)
+		테두리(Border)는 선두께, 선종류, 선색, 이 3가지를 보통 같이 사용
+ -->
+ 
+ <p> 이것은 배경색과 글자색에 대한 색상 표현 연습이여 ~ 앙?</p>
+ <p style="background-color: BurlyWood"> 이것은 배경색과 글자색에 대한 색상 표현 연습이여 ~ 앙?(배경색)</p>
+ <p> 이것은 배경색과 글자색에 대한 색상 표현 연습이여 ~ 앙?</p>
+ <p style="color: Chocolate"> 이것은 배경색과 글자색에 대한 색상 표현 연습이여 ~ 앙?(글자색)</p>
+ <p> 이것은 배경색과 글자색에 대한 색상 표현 연습이여 ~ 앙?</p>
+ <p style="background-color: HotPink; color: khaki;"> 이것은 배경색과 글자색에 대한 색상 표현 연습이여 ~ 앙?(배경색과 글자색)</p>
+ <p> 이것은 배경색과 글자색에 대한 색상 표현 연습이여 ~ 앙?</p>
+ <hr>
+
+
+<p> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?</p>
+<p style="border: tomato;"> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?(색표현x)</p>
+<p> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?</p>
+<p style="border: 2px tomato;"> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?(색 표현x)</p>
+<p> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?</p>
+<p style="border: solid tomato;"> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?(solid = 실선)</p>
+<p> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?</p>
+<p style="border: dotted tomato;"> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?(dotted = 점선)</p>
+<p> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?</p>
+<p style="border: dashed tomato;"> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?(dashed = 박음질)</p>
+<p> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?</p>
+<p style="border: double tomato;"> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?(double = 이중실선)</p>
+<p> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?</p>
+<p style="border: 5px solid tomato;"> 이것은 테두리에 선색을 지정하는 색 표현이야~앙?(solid = 실선)</p>
+<hr>
+
+<!--  2. RGB(red, green, blue), GRBA(red,green,blue, alpha) 
+			각 자리에 가중치 0~ 255 숫자로 표현, 투명도 0.0 ~ 1.0
+-->
+
+<p style="background-color: rgb(255,0,0)"> 이것은 RGB 색상표현 이여</p>
+<p> 이것은 RGB 색상표현 이여</p>
+<p style="background-color: rgb(255,255,0)"> 이것은 RGB 색상표현 이여</p>
+<p> 이것은 RGB 색상표현 이여</p>
+<hr>
+<p style="background-color: rgba(255,0,0, 0.0)"> 이것은 RGBA 색상표현 이여</p>
+<p> 이것은 RGBA 색상표현 이여</p>
+<p style="background-color: rgba(255,0,0, 0.5)"> 이것은 RGBA 색상표현 이여</p>
+<p> 이것은 RGBA 색상표현 이여</p>
+<p style="background-color: rgba(255,0,0 , 1.0)"> 이것은 RGBA 색상표현 이여</p>
+<p> 이것은 RGBA 색상표현 이여</p>
+<hr>
+
+<!--  HEX (rr,gg,bb) 
+		 HEXA(rr,gg,bb,aa(불투명도))
+		 한 자리에 표현 가능한 수 : 16진수(0~9,a,b,c,d,e,f) 	 
+-->
+
+<p> 이것은 HEX 색상표현 이여</p>
+<p style="background-color: #ff0000"> 이것은 HEX 색상표현 이여</p>
+<p> 이것은 HEX 색상표현 이여</p>
+<p style="background-color: #f00"> 이것은 HEX 색상표현 이여</p>
+<p> 이것은 HEX 색상표현 이여</p>
+<p style="background-color: #ffff00"> 이것은 HEX 색상표현 이여</p>
+<p> 이것은 HEX 색상표현 이여</p>
+<p style="background-color: #ff0"> 이것은 HEX 색상표현 이여</p>
+<p> 이것은 HEX 색상표현 이여</p>
+<p> 이것은 HEX 색상표현 이여</p>
+<hr>
+<p style="background-color: #ff000000"> 이것은 HEX 색상표현 이여</p>
+<p> 이것은 HEX 색상표현 이여</p>
+<p style="background-color: #ff000055"> 이것은 HEX 색상표현 이여</p>
+<p> 이것은 HEX 색상표현 이여</p>
+<p style="background-color: #ff0000ff"> 이것은 HEX 색상표현 이여</p>
+
+
+</body>
+</html>

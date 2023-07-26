@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 태그 : 입력양식</title>
+</head>
+<body>
+<!--  form : 사용자에게 정보를 입력 받아 원하는 페이지(서버)에게 정보를 보냄 
+		<form [action=""] [method=""] [enctype=""] auto>
+				form elements(폼 요소들)
+		</form>
+		1. action="정보가 전달될 페이지 경로(서버경로)	"
+		2. method="정보를 전달하는 방법"
+			- get(생략가능) : 정보를 헤더에 담아서 보냄
+								  적은용량만 가능, 주소창에 내용이 보임
+								  보안에 취약, 속도는 빠름 ex)검색할 때 쓰임
+			- post : 정보를 body에 담아서 보냄
+						많은 용량 가능, 주소창에 내용이 보이지 않음
+						상대적으로 보안적
+		3. enctype : 파일 업로드 할 때만 사용(평소에는 생략)
+		
+		4. autocomplete : 기본이 on 자동완성기능
+		
+		5. form elements(폼 요소들) : input, label, select, textarea, datalist
+												fieldset, legend
+			- input 태그의 속성들 : text, button, radio, checkbox, file, hidden
+										 number, password, reset, submit, tel, color,
+										 date, email, time, url, week, range, search..
+			  input type 속성 중 name속성은 데이터 전달 될 때 사용되는 name
+			  input type 속성 중 value속성은 데이터가 전달 될 때 사용되는 값
+			  ** 데이터가 전달될 때 ?name=value&name=value&name=value&..식으로 전달
+			  -name은 있는데 value가 없을 수도 있음
+			  -주소창에 보이면 get방식(검색은 왠만하면 get)
+			  ** 같은 이름에 value가 여러개인 경우도 같음(단, 서버는 배열로 받아 사용)
+			  **radio나 checkbox의 속성중 checked는 선태 표시가 되었다는 뜻
+			  **select : selected 속성을 지정하면 선택되었다는 뜻
+			  				option 태그와 함께 사용
+			  				size 속성은 화면에 표시되는 option 개수
+			  				mutiple 속성을 지정하면 여러개 동시 선택 (단, ctrl키 눌러야함)
+			  **reset : 속성은 form 태그안에 입력한 기존 정보를 삭제(버튼형태)
+			  **submit : 속성은 form 정보를 action이 지정한 페이지에 전달하는 역할(버튼형태)
+			  --------------------------------------------------
+			  ** disabled : 커서가 들어가지 않아 입력불가
+			  ** readonly : 오직 읽기만 가능, 수정불가
+			  ** placeholder : 입력필드(input type="text")에 힌트 표시
+			  ** pattern : [0~9(숫자만)] {3(자리수 뜻함)} [A-Z a-z(대소문자 뜻함)]
+			  					ex) 전화번호 : [0~9]{3} - [0-9]{4} - [0-9]{4}
+			  ** required : 반드시 입력해야 되는 태그의 붙이는 속성
+			  **javascript 전 까지는 submit 속성을 이용해 데이터 전달
+			  **javascript 에서는 input type=button 속성의 onclick을 이용해 데이터 전달 할 수도 있음
+			  (태그 속성 중 onXXXXXX는 자바스크립트의 함수를 호출할 수 있음)
+
+-->
+
+	<form action="Ex01_formTag.html"  method="get"  autocomplete="on">
+	<!-- input type="text" 는 한줄 입력, 사용자가 입력한 정보가 value가 됨 -->
+			<p> 아이디 : <input type="text" name="id" placeholder="id를 입력하세요"
+								required maxlength="10"></p>
+			<p> <label>패스워드 : </label>
+			<!-- input type="text" 는 한줄 입력, 사용자가 입력한 정보가 value가 됨 
+					입력한 내용이 점(●)으로 보임-->
+			<input type="password" name="pw" placeholder="pw를 입력하세요"
+			required>
+			</p>
+			<!--  number는 숫자만 받을 수 있음 maxlength="3" X, pattern="[0-9]{3}" X -->
+			<p> 나이 : <input type="number" name="age" placeholder="나이 입력" maxlength="3"></p>
+			<!--  text는 maxlength="3" O, pattern"[0-9]{3} O => submit 눌렀을 때 체크 -->
+			<p> 나이 : <input type="text" name="age" placeholder="나이 입력" maxlength="3" pattern="[0-9]{3}"></p>
+			<p> 생년월일 : <input type="text" name="birth" placeholder="6자리 입력" 
+									pattern="[0-9]{6}"></p>
+			<p>성별 :
+					<!-- radio, checkbox, select등은 name, value를 직접입력 -->
+					<input type="radio" name="gender" value="남성" checked>남성
+					<input type="radio" name="gender" value="여성">여성
+			</p>
+			<p> 취미 :
+			<!-- radio, checkbox, select등은 name, value를 직접입력 -->
+			<!-- checkbox도 name하나로 지정. 여러개를 선택하면 서버에서는 배열로 받자 -->
+					<input type="checkbox" name="hobby" value="1">운동
+					<input type="checkbox" name="hobby" value="2">영화
+					<input type="checkbox" name="hobby" value="3">게임
+					<input type="checkbox" name="hobby" value="4">잠자기
+			</p>
+			<p>주소 :
+					<select name="addr">
+						<option>::  선택하세요 :: </option>
+						<option value="1"> 서울 </option>
+						<option value="2"> 경기도 </option>
+						<!-- value를 입력하지 않으면 텍스트가 value가 됨 -->
+						<option>제주도</option>
+						<option>해외</option>
+					</select>
+				</p>
+				<p>브라우저 :
+				<!--  multiple 사용으로 여러개 사용가능, size를 이용하면 보이는 개수 지정  -->
+					<select name="browser"  multiple size="5">
+						
+						<option value="1"> 크롬 </option>
+						<option value="2"> 엣지 </option>
+						<option value="3"> 사파리 </option>
+						<!-- value를 입력하지 않으면 텍스트가 value가 됨 -->
+						<option>파이어폭스</option>
+						<option>오페라</option>
+					</select>
+				</p>
+				
+				<!--  파일 업로드할 때 사용 반드시 <form enctype를 입력해야함 -->
+				<p> 파일 : <input type="file"  name="file"></p>
+				<p> 날짜 : <input type="date"  name="date"></p>
+				
+			 
+			<p> 자기소개서 <br>
+					<!-- 여러줄의 텍스트를 입력할 때 사용 -->
+					<textarea rows="5"  cols="25"></textarea>
+			</p>
+			<!--  화면에는 안보이면서 이름과 값을 원하는 페이지에 넘길 때 사용 -->
+			<input type="hidden" name="page" value="2">
+			
+			 <!-- reset,submit은 버튼에 새겨지는 글자 -->
+			<p><input type="reset"  value="취소"></p>
+			<p><input type="submit" value="보내기"></p>
+	</form>
+</body>
+</html>

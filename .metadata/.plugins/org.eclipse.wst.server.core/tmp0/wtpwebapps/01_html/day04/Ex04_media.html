@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Video, Audio</title>
+</head>
+<body>
+<!-- 
+		속성 : controls : 컨트롤러 보이게 하기
+				autoplay : 자동실행
+				loop 	: 반복실행
+				muted : 음소거, autoplay와 같이 사용하면 자동실행됨
+ -->
+ <video src="../multi/mov_bbb.mp4"  width="200px"  controls autoplay muted loop></video>
+ <hr>
+ <video width ="800" controls autoplay muted>
+ 		<source src="../multi/mov_bbb.mp4">
+ </video>
+ <hr>
+ 
+ <audio src="../multi/ALL.mp3" controls autoplay muted></audio>
+ <hr>
+ 
+ <audio controls autopaly muted>
+ 		<source src="../multi/ALL.mp3">
+ </audio>
+ <hr>
+ <!--  youtube	 -->
+ <!-- 해당 동영상 아래 공유를 눌러 퍼가기를 선택하면 동영상 퍼가기 내용을 복사 붙이기 하자 -->
+ <!--  주소뒤에 ?autopaly=1&mute=1을 붙이면 자동실행 됨 -->
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/IAtVJWFyU74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ 
+ 
+</body>
+</html>

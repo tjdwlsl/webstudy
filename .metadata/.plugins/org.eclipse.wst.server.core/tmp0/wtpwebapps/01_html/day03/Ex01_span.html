@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table_span</title>
+<style type="text/css">
+		h2,p, th, td{
+		text-align: center;
+		}
+		table{
+		width:60%;
+		margin: auto;
+		}
+		table, th, td{
+		border: 1px solid orange;
+		border-collapse: collapse;
+		}
+		
+</style>
+
+
+</head>
+<body>
+<!--  
+		열 합치기(좌우) : colspan ="합쳐질 숫자"
+		- 가장 왼쪽만 살아 남아서 합치기를 함
+		행 합치기(위아래) : rowspan ="합쳐질 숫자"
+		- 가장 위쪽만 살아 남아서 함치기를 함
+		
+		<caption> 태그는 테이블. 사진, 삽화등에 붙이는 설명을 정의할 때 사용
+		가운데 정렬, 항상 위에 존재함
+ -->
+ 
+ <h2> 열 합치기 (colspan)</h2>
+ <p> 컬럼과 컬럼을 합칠 때 사용, 가장 왼쪽 컬럼만 살아남음</p>
+ <table>
+ 		<caption><h3>인재개발원 숙소</h3></caption>
+ 		<thead>
+ 		<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+ 		</thead>
+ 		
+ 		<tbody>
+ 				<tr>
+ 					<td>유채방</td><td>여성</td><td>4인실</td><td>1인 60000원</td>
+ 				</tr>
+ 				<tr>
+ 					<td>동백방</td><td>동성</td><td>4인실</td><td>1인 60000원</td>
+ 				</tr>
+ 				<tr>
+ 					<td>동백방</td><td>가족</td><td>4인실</td><td>1인 60000원</td>
+ 				</tr>
+ 				<tr>
+ 					<td>천헤향방</td><td>누구나</td><td>2인실</td><td>1인 60000원</td>
+ 				</tr>
+ 		</tbody>
+ 		<tfoot>
+ 				<tr>
+ 					<td colspan="4">** 3세까지무료</td>
+ 				</tr>
+ 		</tfoot>
+ 		</table>
+ 		
+ 		
+<h2> 행 합치기 (rowspan)</h2>
+ <p> 컬럼과 컬럼을 합칠 때 사용, 가장 왼쪽 컬럼만 살아남음</p>
+ <table>
+ 		<caption><h3>인재개발원 숙소</h3></caption>
+ 		<thead>
+ 		<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+ 		</thead>
+ 		
+ 		<tbody>
+ 				<tr>
+ 					<td>유채방</td><td>여성</td><td rowspan="3">4인실</td><td rowspan="4">1인 60000원</td>
+ 				</tr>
+ 				<tr>
+ 					<td rowspan="2">동백방</td><td>동성</td>
+ 				</tr>
+ 				<tr>
+ 					<td>가족</td>
+ 				</tr>
+ 				<tr>
+ 					<td>천헤향방</td><td>누구나</td><td>2인실</td>
+ 				</tr>
+ 		</tbody>
+ 		<tfoot>
+ 				<tr>
+ 					<td>** 3세까지무료</td><td>** 3세까지무료</td><td>** 3세까지무료</td><td>** 3세까지무료</td>
+ 				</tr>
+ 		</tfoot>
+ </table>
+ 
+ <h2> 행 과 열 모두 합치기</h2>
+ <p> 컬럼과 컬럼을 합칠 때 사용, 가장 왼쪽 컬럼만 살아남음</p>
+ <table>
+ 		<caption><h3>인재개발원 숙소</h3></caption>
+ 		<thead>
+ 		<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+ 		</thead>
+ 		
+ 		<tbody>
+ 				<tr>
+ 					<td>유채방</td><td>여성</td><td rowspan="3">4인실</td><td rowspan="4">1인 60000원</td>
+ 				</tr>
+ 				<tr>
+ 					<td rowspan="2">동백방</td><td>동성</td>
+ 				</tr>
+ 				<tr>
+ 					<td>가족</td>
+ 				</tr>
+ 				<tr>
+ 					<td>천헤향방</td><td>누구나</td><td>2인실</td>
+ 				</tr>
+ 		</tbody>
+ 		<tfoot>
+ 				<tr>
+ 					<td colspan="4">** 3세까지무료</td>
+ 				</tr>
+ 		</tfoot>
+ 		</table>
+</body>
+</html>
